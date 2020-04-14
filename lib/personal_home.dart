@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PersonalHome extends StatefulWidget {
   @override
   _PersonalHomeState createState() => new _PersonalHomeState();
 }
+
+// class CallService {
+//   void call(String number) => launch("tel:8210832018");
+// }
+
+// GetIt locator = GetIt();
+
+// void set {
+//   locator.registerSingleton(CallService);
+// }
 
 class _PersonalHomeState extends State<PersonalHome> {
   @override
@@ -21,7 +33,9 @@ class _PersonalHomeState extends State<PersonalHome> {
                 icon: Icon(
                   Icons.call,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  launch("tel:+918210832018");
+                },
               ),
             ],
             pinned: true,
